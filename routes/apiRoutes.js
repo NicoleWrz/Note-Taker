@@ -1,11 +1,11 @@
-const apiRoutes = requires('express').Router();
-let dbNote = require('../db/db.json');
-const path = require('path');
+const apiRoutes = require('express').Router();
+const path = require("path");
+let db = require('../db/db.json');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
 apiRoutes.get("/notes", (req, res) => {
-    return res.json(dbNote);
+    res.json(db);
 });
 
 apiRoutes.post('/notes', (req, res) => {
@@ -15,10 +15,13 @@ apiRoutes.post('/notes', (req, res) => {
         id: uuidv4()
     };
     db.push(note);
-    fs.writeFile('../db/db.json'), JSON.stringify(dbNote);
+    fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(db));
     res.send(`${req.method} New note added`);
 });
 
-// apiRoutes.delete("/notes", (req, res) => {
+// // apiRoutes.delete("/notes:id", (req, res) => {
+//     res.json(`delete)
 
-// });
+// // });
+
+module.exports = apiRoutes
