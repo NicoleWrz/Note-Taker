@@ -18,6 +18,8 @@
   - npm install uuid
 
   ## Screenshots
+  ![](https://github.com/NicoleWrz/Note-Taker/blob/f0aa503867901822705fa0dacc918a4221d540b0/public/assets/images/Starting%20screen.png)
+  ![](https://github.com/NicoleWrz/Note-Taker/blob/f0aa503867901822705fa0dacc918a4221d540b0/public/assets/images/exampleSS.png)
 
   ## License
   [![License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue&?style=plastic&link=https://choosealicense.com/licenses/mit/)](https://choosealicense.com/licenses/mit/)
