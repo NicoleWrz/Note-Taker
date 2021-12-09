@@ -16,12 +16,7 @@ apiRoutes.post('/notes', (req, res) => {
     };
     db.push(note);
     fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(db));
-    res.send(`${req.method} New note added`);
+    res.send(`${req.method} Note added`);
 });
-
-// // apiRoutes.delete("/notes:id", (req, res) => {
-//     res.json(`delete)
-
-// // });
 
 module.exports = apiRoutes
